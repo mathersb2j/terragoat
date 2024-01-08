@@ -19,8 +19,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Run Bridgecrew 
-        id: Bridgecrew
+      - name: Run Prisma Cloud Scan
+        id: prisma-cloud
         uses: bridgecrewio/bridgecrew-action@master 
         with:
           api-key: ${{ secrets.BC_API_KEY }}
