@@ -33,3 +33,5 @@ resource null_resource "push_image" {
     BASH
   }
 }
+
+# Test for PC Scan

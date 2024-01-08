@@ -14,3 +14,12 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: terraform/
+
+      - name: Run Prisma Cloud Scan
+        id: prisma-cloud
+        uses: bridgecrewio/checkov-action@master 
+        env:
+          PRISMA_API_URL: https://api4.prismacloud.io
+        with:
+          api-key: ${{ secrets.BC_API_KEY }}
+          use_enforcement_rules: true
